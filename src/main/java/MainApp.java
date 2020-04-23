@@ -1,10 +1,7 @@
 import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class MainApp implements Runnable {
@@ -13,7 +10,7 @@ public class MainApp implements Runnable {
 
     private void startApp() {
         scanner = new Scanner(System.in);
-        System.out.println("Wybierz po czym chcesz znaleźć miejsce dla którego wyświetlisz pogodę \n0 - Zakończ działanie \n1 - Nazwa Miasta \n2 - Kod pocztowy");
+        System.out.println("Wybierz po czym chcesz znaleźć miejsce dla którego wyświetlisz pogodę \n0 - Zakończ działanie \n1 - Nazwa Miasta \n2 - Kod pocztowy \n3 - Koordynaty");
         Integer name = scanner.nextInt();
         chooseTypeSearching(name);
     }
@@ -28,6 +25,10 @@ public class MainApp implements Runnable {
                 break;
             case 2:
                 connectByZipCode();
+                startApp();
+                break;
+            case 3:
+                connectByCords();
                 startApp();
                 break;
         }
@@ -67,6 +68,28 @@ public class MainApp implements Runnable {
             response = "404";
         }
         return response;
+    }
+
+    private void connectByCords(){
+        System.out.println("Podaj koordynaty x,y miasta: ");
+        String cordX = scanner.next();
+        String cordY = scanner.next();
+        String response = connectByCords(cordX , cordY);
+        parseJson(response);
+
+    }
+    public String connectByCords(String cordX, String cordY) {
+        String response = null;
+
+        try {
+            response = new HttpService().connect(Config.APP_URL + "?lat=" + cordX + "&lon=" + cordY + "&appid=" + Config.APP_ID);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            response = "404";
+        }
+        return response;
+
     }
 
     private void parseJson(String json) {

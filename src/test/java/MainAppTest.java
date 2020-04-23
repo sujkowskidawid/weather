@@ -1,4 +1,6 @@
+import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONString;
 import org.junit.jupiter.api.*;
 import java.io.IOException;
 public class MainAppTest {
@@ -38,6 +40,18 @@ public class MainAppTest {
         JSONObject jsonObject = new JSONObject(responseTest);
         Assertions.assertEquals(200, jsonObject.getInt("cod"));
         Assertions.assertEquals("Raciąż", jsonObject.getString("name"));
+    }
+
+    @Test
+    @DisplayName("Test pogody dla koordynatów x=35, y=139")
+    void connectByCords(){
+        MainApp mainApp = new MainApp();
+        String responseTest = mainApp.connectByCords("35","139");
+        JSONObject jsonObject = new JSONObject(responseTest);
+        JSONObject jsonObject1 = jsonObject.getJSONObject("coord");
+        Assertions.assertEquals(200,jsonObject.getInt("cod"));
+        Assertions.assertEquals(35,jsonObject1.getDouble("lat"));
+        Assertions.assertEquals(139, jsonObject1.getDouble("lon"));
     }
 
     @Test

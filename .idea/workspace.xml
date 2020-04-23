@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89538f95-cbdb-471b-91b7-85a4d81314ab" name="Default Changelist" comment="" />
+    <list default="true" id="89538f95-cbdb-471b-91b7-85a4d81314ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainAppTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1avokC1NCB3ywJGeNIwgdkkcUOD" />
   <component name="ProjectViewState">
@@ -14,6 +22,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -33,9 +42,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainAppTest.connectByCords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApiWeather" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainAppTest" />
+      <option name="METHOD_NAME" value="connectByCords" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainAppTest.parseJsonForXDaysTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApiWeather" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainAppTest" />
+      <option name="METHOD_NAME" value="parseJsonForXDaysTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MainAppTest.connectByCords" />
+        <item itemvalue="JUnit.MainAppTest.parseJsonForXDaysTest" />
         <item itemvalue="JUnit.MainAppTest" />
       </list>
     </recent_temporary>
@@ -54,21 +85,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1876" height="259" key="GridCell.Tab.0.bottom" timestamp="1587632354226">
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587636335647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587632354226" />
-    <state width="1876" height="259" key="GridCell.Tab.0.center" timestamp="1587632354226">
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587636335647" />
+    <state width="1876" height="259" key="GridCell.Tab.0.bottom" timestamp="1587637226719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587632354226" />
-    <state width="1876" height="259" key="GridCell.Tab.0.left" timestamp="1587632354226">
+    <state width="1876" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587637226719" />
+    <state width="1876" height="259" key="GridCell.Tab.0.center" timestamp="1587637226719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587632354226" />
-    <state width="1876" height="259" key="GridCell.Tab.0.right" timestamp="1587632354226">
+    <state width="1876" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587637226719" />
+    <state width="1876" height="259" key="GridCell.Tab.0.left" timestamp="1587637226719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587632354226" />
+    <state width="1876" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587637226719" />
+    <state width="1876" height="259" key="GridCell.Tab.0.right" timestamp="1587637226719">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587637226719" />
   </component>
 </project>
