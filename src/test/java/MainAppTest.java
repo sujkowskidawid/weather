@@ -1,3 +1,4 @@
+import lombok.ToString;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONString;
@@ -52,6 +53,13 @@ public class MainAppTest {
         Assertions.assertEquals(200,jsonObject.getInt("cod"));
         Assertions.assertEquals(35,jsonObject1.getDouble("lat"));
         Assertions.assertEquals(139, jsonObject1.getDouble("lon"));
+    }
+    @Test
+    @DisplayName("Test pogody dla 5 dni")
+    void connectByCityForXDays(){
+        MainApp mainApp = new MainApp();
+        String responseTest = mainApp.connectByCityForXDays("Warszawa");
+
     }
 
     @Test

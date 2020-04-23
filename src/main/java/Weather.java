@@ -27,7 +27,7 @@ public class Weather {
     public String toString() {
         DecimalFormat df = new DecimalFormat("#.##");
         return "\nData = '" + data +
-                ", Temperatura=" + df.format(temperature) + " \u00b0C"+
+                ", Temperatura=" + temperature + " \u00b0C"+
                 ", Zachmurzenie =" + clouds + " %" +
                 ", Ciśnienie =" + pressure + " hPa "+
                 ", Wilgotność =" + humidity +" % "+

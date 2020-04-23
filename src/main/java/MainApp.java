@@ -112,7 +112,7 @@ public class MainApp implements Runnable {
     public String connectByCityForXDays(String cityName) {
         String response = null;
         try {
-            response = new HttpService().connect(Config.APP_URL2 + "?q=" + cityName + "&appid=" + Config.APP_ID);
+            response = new HttpService().connect(Config.APP_URL2 + "?q=" + cityName + "&appid=" + Config.APP_ID + "&units=metric");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -130,25 +130,29 @@ public class MainApp implements Runnable {
 
         if (rootObject.getInt("cod") == 200) {
             for (int i = 0; i < xObject.length(); i++) {
-                JSONObject firstObject = xObject.getJSONObject(0).getJSONObject("main");
-                JSONObject mainObject = xObject.getJSONObject((i));
-                Weather weather = new Weather();
+                JSONObject firstObject = xObject.getJSONObject(i).getJSONObject("main");
+                    JSONObject mainObject = xObject.getJSONObject((i));
+                if (mainObject.getString("dt_txt").contains("12:00:00")) {
 
-                weather.setData(mainObject.get("dt_txt").toString());
+                    Weather weather = new Weather();
 
-                weather.setTemperature(Double.parseDouble(firstObject.get("temp").toString()));
-                weather.setPressure(Double.parseDouble(firstObject.get("pressure").toString()));
+                    weather.setData(mainObject.get("dt_txt").toString());
 
-                JSONObject cloudsObject = xObject.getJSONObject(0).getJSONObject("clouds");
-                weather.setClouds(Double.parseDouble(cloudsObject.get("all").toString()));
-                weather.setHumidity(Double.parseDouble(firstObject.get("humidity").toString()));
-                weatherList.add(weather);
+                    weather.setTemperature(Double.parseDouble(firstObject.get("temp").toString()));
+                    weather.setPressure(Double.parseDouble(firstObject.get("pressure").toString()));
 
+                    JSONObject cloudsObject = xObject.getJSONObject(i).getJSONObject("clouds");
+                    weather.setClouds(Double.parseDouble(cloudsObject.get("all").toString()));
+                    weather.setHumidity(Double.parseDouble(firstObject.get("humidity").toString()));
+
+                    weatherList.add(weather);
+
+                }
             }
         } else {
             System.out.println("Error");
         }
-        System.out.println(weatherList);
+        System.out.println(weatherList);//pięknie działa :)ale  a jesntie teraz działa, pobierałeś zawsze pogodęe dla 0 obiektu zamist dla obiektu aktualnego czyli i:)
 
     }
 
