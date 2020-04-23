@@ -1,7 +1,10 @@
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class MainApp implements Runnable {
@@ -10,7 +13,7 @@ public class MainApp implements Runnable {
 
     private void startApp() {
         scanner = new Scanner(System.in);
-        System.out.println("Wybierz po czym chcesz znaleźć miejsce dla którego wyświetlisz pogodę \n0 - Zakończ działanie \n1 - Nazwa Miasta \n2 - Kod pocztowy \n3 - Koordynaty");
+        System.out.println("Wybierz po czym chcesz znaleźć miejsce dla którego wyświetlisz pogodę \n0 - Zakończ działanie \n1 - Nazwa Miasta \n2 - Kod pocztowy \n3 - Koordynaty \n4 - Nazwa miasta - pogoda na 5 dni");
         Integer name = scanner.nextInt();
         chooseTypeSearching(name);
     }
@@ -29,6 +32,10 @@ public class MainApp implements Runnable {
                 break;
             case 3:
                 connectByCords();
+                startApp();
+                break;
+            case 4:
+                connectByCityForXDays();
                 startApp();
                 break;
         }
@@ -58,7 +65,8 @@ public class MainApp implements Runnable {
         String response = connectByZipCode(zipcode);
         parseJson(response);
     }
-    public String connectByZipCode(String zipcode){
+
+    public String connectByZipCode(String zipcode) {
         String response = null;
         try {
             response = new HttpService().connect(Config.APP_URL + "?zip=" + zipcode + ",pl" + "&appid=" + Config.APP_ID);
@@ -70,14 +78,15 @@ public class MainApp implements Runnable {
         return response;
     }
 
-    private void connectByCords(){
+    private void connectByCords() {
         System.out.println("Podaj koordynaty x,y miasta: ");
         String cordX = scanner.next();
         String cordY = scanner.next();
-        String response = connectByCords(cordX , cordY);
+        String response = connectByCords(cordX, cordY);
         parseJson(response);
 
     }
+
     public String connectByCords(String cordX, String cordY) {
         String response = null;
 
@@ -89,6 +98,57 @@ public class MainApp implements Runnable {
             response = "404";
         }
         return response;
+
+    }
+
+    public void connectByCityForXDays() {
+        System.out.println("Podaj nazwę miasta: ");
+        String cityName = scanner.next();
+        String response = connectByCityForXDays(cityName);
+        parseJson2(response);
+
+    }
+
+    public String connectByCityForXDays(String cityName) {
+        String response = null;
+        try {
+            response = new HttpService().connect(Config.APP_URL2 + "?q=" + cityName + "&appid=" + Config.APP_ID);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            response = "404";
+        }
+        return response;
+    }
+
+    private void parseJson2(String json) {
+
+
+        JSONObject rootObject = new JSONObject(json);
+        JSONArray xObject = rootObject.getJSONArray("list");
+        List<Weather> weatherList = new ArrayList<>();
+
+        if (rootObject.getInt("cod") == 200) {
+            for (int i = 0; i < xObject.length(); i++) {
+                JSONObject firstObject = xObject.getJSONObject(0).getJSONObject("main");
+                JSONObject mainObject = xObject.getJSONObject((i));
+                Weather weather = new Weather();
+
+                weather.setData(mainObject.get("dt_txt").toString());
+
+                weather.setTemperature(Double.parseDouble(firstObject.get("temp").toString()));
+                weather.setPressure(Double.parseDouble(firstObject.get("pressure").toString()));
+
+                JSONObject cloudsObject = xObject.getJSONObject(0).getJSONObject("clouds");
+                weather.setClouds(Double.parseDouble(cloudsObject.get("all").toString()));
+                weather.setHumidity(Double.parseDouble(firstObject.get("humidity").toString()));
+                weatherList.add(weather);
+
+            }
+        } else {
+            System.out.println("Error");
+        }
+        System.out.println(weatherList);
 
     }
 

@@ -2,17 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89538f95-cbdb-471b-91b7-85a4d81314ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiWeather.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiWeather.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MainAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MainAppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MainAppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="sujkowskidawid &lt;sujkowskidawid942gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1avokC1NCB3ywJGeNIwgdkkcUOD" />
@@ -23,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../weathermarcin/apiWeather" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -82,28 +99,64 @@
       <option name="presentableId" value="Default" />
       <updated>1587625568310</updated>
     </task>
+    <task id="LOCAL-00001" summary="end">
+      <created>1587637369220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587637369220</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="end" />
+    <option name="LAST_COMMIT_MESSAGE" value="end" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="1032" y="177" key="#Inspections" timestamp="1587640789635">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1032" y="177" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1587640789635" />
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587636335647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587636335647" />
-    <state width="1876" height="259" key="GridCell.Tab.0.bottom" timestamp="1587637226719">
+    <state x="729" y="220" key="#com.intellij.ide.util.MemberChooser" timestamp="1587648940755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587637226719" />
-    <state width="1876" height="259" key="GridCell.Tab.0.center" timestamp="1587637226719">
+    <state x="729" y="220" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587648940755" />
+    <state x="614" y="113" key="CommitChangelistDialog2" timestamp="1587637368244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587637226719" />
-    <state width="1876" height="259" key="GridCell.Tab.0.left" timestamp="1587637226719">
+    <state x="614" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587637368244" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1587639862520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587637226719" />
-    <state width="1876" height="259" key="GridCell.Tab.0.right" timestamp="1587637226719">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587639862520" />
+    <state width="1876" height="243" key="GridCell.Tab.0.bottom" timestamp="1587649159646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587637226719" />
+    <state width="1876" height="243" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587649159646" />
+    <state width="1876" height="243" key="GridCell.Tab.0.center" timestamp="1587649159646">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="243" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587649159646" />
+    <state width="1876" height="243" key="GridCell.Tab.0.left" timestamp="1587649159645">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="243" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587649159645" />
+    <state width="1876" height="243" key="GridCell.Tab.0.right" timestamp="1587649159646">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="243" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587649159646" />
+    <state x="970" y="174" key="Maven.ArtifactSearchDialog" timestamp="1587642552512">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="970" y="174" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587642552512" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587637374139">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587637374139" />
   </component>
 </project>
