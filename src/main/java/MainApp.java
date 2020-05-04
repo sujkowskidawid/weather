@@ -132,7 +132,7 @@ public class MainApp implements Runnable {
             for (int i = 0; i < xObject.length(); i++) {
                 JSONObject firstObject = xObject.getJSONObject(i).getJSONObject("main");
                     JSONObject mainObject = xObject.getJSONObject((i));
-                if (mainObject.getString("dt_txt").contains("12:00:00")) {
+                if (mainObject.getString("dt_txt").contains("15:00:00")) {
 
                     Weather weather = new Weather();
 
@@ -152,7 +152,7 @@ public class MainApp implements Runnable {
         } else {
             System.out.println("Error");
         }
-        System.out.println(weatherList);//pięknie działa :)ale  a jesntie teraz działa, pobierałeś zawsze pogodęe dla 0 obiektu zamist dla obiektu aktualnego czyli i:)
+        System.out.println(weatherList);
 
     }
 
